@@ -1,0 +1,26 @@
+#pgp_key_generator_username,
+#pgp_key_generator_mail_address,
+#pgp_key_generator_key_password,
+#pgp_key_generator_key_length,
+#pgp_key_generator_key_password_decrypt {
+  width: 300px;
+}
+
+#pgp_key_generator_pubgenkey,
+#pgp_key_generator_privgenkey,
+#pgp_key_generator_message_encrypt,
+#pgp_key_generator_pubkey,
+#pgp_key_generator_message_decrypt,
+#pgp_key_generator_privkey {
+  width: 530px;
+  height: 200px;
+  font-family: Consolas, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace;
+}
+
+#pgp_key_generator_form1 .error,
+#pgp_key_generator_form2 .error,
+#pgp_key_generator_form3 .error {
+  font-weight: bold;
+  color: red;
+  font-size: 12px;
+}
