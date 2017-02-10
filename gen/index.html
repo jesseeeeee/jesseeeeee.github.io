@@ -1,0 +1,97 @@
+
+<div class="accordion" id="accordion2">
+<div class="accordion-group">
+<div class="accordion-heading">
+<a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseOne">Generate PGP Keys</a>
+</div>
+<div id="collapseOne" class="accordion-body collapse">
+<div class="accordion-inner">
+<div class="block">
+<form name="pgp_key_generator_form1" id="pgp_key_generator_form1">
+<label for="pgp_key_generator_username">Your name:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="font-style: italic;">required</span></label>
+<input type="text" name="pgp_key_generator_username" id="pgp_key_generator_username"/>
+<br/>
+<label for="pgp_key_generator_mail_address">Your e-mail address:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="font-style: italic;">required</span></label>
+<input type="text" name="pgp_key_generator_mail_address" id="pgp_key_generator_mail_address"/>
+<br/>
+<label for="pgp_key_generator_key_password">Choose a password:</label>
+<input type="password" name="pgp_key_generator_key_password" id="pgp_key_generator_key_password"/>
+<div>Need help to choose a password? <a href="https://passwordgenerator.clicface.fr/" target="_blank">Try a nice password generator.</a></div>
+<br/>
+<label for="pgp_key_generator_key_length">Key Size:</label>
+<select name="pgp_key_generator_key_length" id="pgp_key_generator_key_length">
+<option value="1024">1024 bits - for testing purpose only</option>
+<option value="2048" selected="selected">2048 bits - recommanded</option>
+<option value="4096">4096 bits - more secure</option>
+</select>
+<br/>
+Your browser may not respond during key generation.<br/>
+<input type="button" class="btn btn-primary" value="Generate PGP Keys" name="pgp_key_generator_form1_button" id="pgp_key_generator_form1_button"/>
+</form>
+</div>
+<br/>
+<div class="block">
+<h4>Public Key</h4>
+<textarea id="pgp_key_generator_pubgenkey"></textarea>
+<h4>Private Key</h4>
+<textarea id="pgp_key_generator_privgenkey"></textarea>
+</div>
+</div>
+</div>
+</div>
+<div class="accordion-group">
+<div class="accordion-heading">
+<a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseTwo">Encrypt a Message</a>
+</div>
+<div id="collapseTwo" class="accordion-body collapse">
+<div class="accordion-inner">
+<div class="block">
+<form name="pgp_key_generator_form2" id="pgp_key_generator_form2">
+<label for="pgp_key_generator_message_encrypt">Your message:</label>
+<textarea name="pgp_key_generator_message_encrypt" id="pgp_key_generator_message_encrypt">Here is my secret message</textarea>
+<br/>
+<input type="button" class="btn btn-primary" value="Encrypt" name="pgp_key_generator_form2_button" id="pgp_key_generator_form2_button"/>
+<br/>&nbsp;<br/>
+<label for="pgp_key_generator_pubkey">The public key to encrypt to:</label>
+<textarea name="pgp_key_generator_pubkey" id="pgp_key_generator_pubkey"></textarea>
+</form>
+</div>
+</div>
+</div>
+</div>
+<div class="accordion-group">
+<div class="accordion-heading">
+<a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseThree">Decrypt a Message</a>
+</div>
+<div id="collapseThree" class="accordion-body collapse">
+<div class="accordion-inner">
+<div class="block">
+<form name="pgp_key_generator_form3" id="pgp_key_generator_form3">
+<label for="pgp_key_generator_key_password_decrypt">Your password:</label>
+<input type="password" name="pgp_key_generator_key_password_decrypt" id="pgp_key_generator_key_password_decrypt"/>
+<label for="pgp_key_generator_message_decrypt">Your encrypted message:</label>
+<textarea name="pgp_key_generator_message_decrypt" id="pgp_key_generator_message_decrypt"></textarea>
+<br/>
+<input type="button" class="btn btn-primary" value="Decrypt a Message" name="pgp_key_generator_form3_button" id="pgp_key_generator_form3_button"/>
+<br/>&nbsp;<br/>
+<label for="pgp_key_generator_privkey">Your private key:</label>
+<textarea name="pgp_key_generator_privkey" id="pgp_key_generator_privkey"></textarea>
+</form>
+</div>
+</div>
+</div>
+</div>
+</div>
+<script type='text/javascript' src='https://wp2pgpmail.com/wp-includes/js/jquery/jquery.js?ver=1.12.4'></script>
+
+<link rel='stylesheet' href='css/pgp-key-generator.css' type='text/css' media='all'/>
+<link rel='stylesheet' href='css/bootstrap-combined.min.css' type='text/css' media='all'/>
+
+<script type='text/javascript' src='pgp-key-generator.js'></script>
+<script type='text/javascript' src='lib/openpgp.min.js'></script>
+<script type='text/javascript' src='lib/bootstrap.min.js'></script>
+<script type='text/javascript' src='lib/jquery.validate.min.js'></script>
+
+</body>
+</html>
+ 
